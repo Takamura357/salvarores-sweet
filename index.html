@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#190f11">
+  <meta name="description" content="Salvatore's Sweet: un espacio para descubrir postres, sabores y momentos dulces.">
+  <title>Salvatore's Sweet | Un mundo de dulzura</title>
+
+  <!-- El CSS está en su propia carpeta. Cambia los colores y tamaños desde ahí. -->
+  <link rel="icon" href="imagenes/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/diseno.css">
+  <!-- JavaScript se carga al final del documento. -->
+</head>
+<body>
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+  <!-- CABECERA Y MENÚ -->
+  <header class="cabecera" id="cabecera">
+    <div class="contenedor barra-navegacion">
+      <a class="marca" href="#inicio" aria-label="Salvatore's Sweet: ir al inicio">
+        <span class="marca-sello" aria-hidden="true">S</span>
+        <span class="marca-texto">SALVATORE'S <small>Sweet</small></span>
+      </a>
+
+      <button class="menu-boton" id="menu-boton" type="button"
+              aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="menu-principal" id="menu-principal">
+        <nav class="enlaces" aria-label="Navegación principal">
+          <a class="enlace-navegacion activo" href="#inicio">Inicio</a>
+          <a class="enlace-navegacion" href="#postres">Postres</a>
+          <a class="enlace-navegacion" href="#especialidades">Especialidades</a>
+          <a class="enlace-navegacion" href="#nosotros">Sobre nosotros</a>
+          <a class="enlace-navegacion" href="#contacto">Contacto</a>
+        </nav>
+        <form class="buscador" id="buscador" role="search">
+          <label class="solo-lectores" for="buscar-postre">Buscar postres</label>
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg>
+          <input id="buscar-postre" name="q" type="search" placeholder="Buscar..." autocomplete="off">
+          <button class="solo-lectores" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- INICIO: aquí se utiliza la imagen original con fondo oscuro -->
+    <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+      <div class="brillo-hero" aria-hidden="true"></div>
+      <div class="contenedor hero-contenido">
+        <div class="hero-texto">
+          <p class="sobrelinea"><span class="mini-estrella" aria-hidden="true">✦</span> Bienvenidos a Salvatore's Sweet</p>
+          <h1 id="titulo-principal">Cada momento merece algo <em>dulce.</em></h1>
+          <p class="hero-descripcion">Un rincón lleno de sabor, creatividad y pequeños detalles que convierten cualquier ocasión en algo especial.</p>
+          <div class="hero-acciones">
+            <a class="boton boton-dorado" href="#postres">Explorar postres <span aria-hidden="true">↗</span></a>
+            <a class="enlace-subrayado" href="#nosotros">Conoce nuestra esencia <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <figure class="hero-arte">
+          <img src="imagenes/logo.jpg" alt="Logotipo artístico de Salvatore's Sweet con helados, cereza, conos y detalles dorados" width="1024" height="559" fetchpriority="high">
+        </figure>
+      </div>
+      <div class="hero-pie" aria-hidden="true"><span>✦</span><span>EL ARTE DE LO DULCE</span><span>✦</span></div>
+    </section>
+
+    <!-- POSTRES: estas categorías son de ejemplo y se pueden editar en HTML -->
+    <section class="seccion seccion-postres" id="postres" aria-labelledby="titulo-postres">
+      <div class="contenedor">
+        <div class="encabezado-seccion centrado">
+          <span class="etiqueta">Nuestra selección</span>
+          <h2 id="titulo-postres">Date un <em>dulce gusto</em></h2>
+          <p>Descubre nuestras categorías de inspiración. Cada detalle tiene su propio encanto.</p>
+        </div>
+
+        <div class="filtros" aria-label="Filtrar categorías de postres">
+          <button type="button" class="filtro activo" data-filtro="todos" aria-pressed="true">Todos</button>
+          <button type="button" class="filtro" data-filtro="pasteles" aria-pressed="false">Pasteles</button>
+          <button type="button" class="filtro" data-filtro="frios" aria-pressed="false">Fríos</button>
+          <button type="button" class="filtro" data-filtro="especiales" aria-pressed="false">Especiales</button>
+        </div>
+
+        <div class="cuadricula-postres" id="lista-postres">
+          <article class="tarjeta-postre" data-categoria="pasteles" data-busqueda="pasteles tartas tortas cakes celebracion chocolate bizcochos">
+            <div class="tarjeta-visual visual-pastel" aria-hidden="true"><span class="adorno-fondo">✧</span><span class="emoji-postre">🍰</span></div>
+            <div class="tarjeta-informacion"><span class="tarjeta-numero">01 / DULCE</span><h3>Pasteles</h3><p>Ideas deliciosas para celebrar los mejores momentos.</p><a href="#contacto">Más información <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="tarjeta-postre" data-categoria="frios" data-busqueda="helados frios conos cremosos sabores ice cream">
+            <div class="tarjeta-visual visual-helado" aria-hidden="true"><span class="adorno-fondo">✧</span><span class="emoji-postre">🍨</span></div>
+            <div class="tarjeta-informacion"><span class="tarjeta-numero">02 / FRESCO</span><h3>Helados</h3><p>Una inspiración fresca, cremosa y llena de color.</p><a href="#contacto">Más información <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="tarjeta-postre" data-categoria="pasteles" data-busqueda="cupcakes muffins bocaditos pastelitos ponquecitos mini postres">
+            <div class="tarjeta-visual visual-cupcake" aria-hidden="true"><span class="adorno-fondo">✧</span><span class="emoji-postre">🧁</span></div>
+            <div class="tarjeta-informacion"><span class="tarjeta-numero">03 / DETALLE</span><h3>Cupcakes</h3><p>Pequeños detalles para endulzar un gran día.</p><a href="#contacto">Más información <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="tarjeta-postre" data-categoria="especiales" data-busqueda="especialidades postres de la casa flan dulces exclusivos creaciones">
+            <div class="tarjeta-visual visual-especial" aria-hidden="true"><span class="adorno-fondo">✧</span><span class="emoji-postre">🍮</span></div>
+            <div class="tarjeta-informacion"><span class="tarjeta-numero">04 / ESPECIAL</span><h3>Especialidades</h3><p>Sabores para quienes buscan algo diferente.</p><a href="#contacto">Más información <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+        <p class="sin-resultados" id="sin-resultados" role="status" hidden>No encontramos categorías con ese nombre. Prueba otra búsqueda.</p>
+        <p class="estado-busqueda solo-lectores" id="estado-busqueda" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ESPECIALIDADES -->
+    <section class="seccion seccion-especial" id="especialidades" aria-labelledby="titulo-especialidades">
+      <div class="contenedor especial-disposicion">
+        <div class="especial-arte" aria-hidden="true">
+          <div class="circulo-decorativo"><span>✦</span><strong>S</strong><span>✦</span></div>
+          <span class="especial-adorno especial-adorno-uno">✧</span>
+          <span class="especial-adorno especial-adorno-dos">✦</span>
+        </div>
+        <div class="especial-contenido">
+          <span class="etiqueta">El toque Salvatore's</span>
+          <h2 id="titulo-especialidades">Los detalles hacen la <em>diferencia.</em></h2>
+          <p>Hay momentos que merecen un toque extra de dulzura. Nos inspira la combinación de sabores, colores y presentaciones que sorprenden.</p>
+          <div class="lista-valores">
+            <div><span aria-hidden="true">✦</span><p><strong>Sabor</strong><small>Un mundo de posibilidades dulces.</small></p></div>
+            <div><span aria-hidden="true">✦</span><p><strong>Creatividad</strong><small>Ideas para cada ocasión especial.</small></p></div>
+            <div><span aria-hidden="true">✦</span><p><strong>Presentación</strong><small>El encanto también entra por los ojos.</small></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="seccion seccion-nosotros" id="nosotros" aria-labelledby="titulo-nosotros">
+      <div class="contenedor nosotros-contenido">
+        <span class="etiqueta">Nuestra esencia</span>
+        <h2 id="titulo-nosotros">Un universo hecho para los <em>amantes de lo dulce.</em></h2>
+        <p>En Salvatore's Sweet, cada postre representa una oportunidad de compartir, celebrar y disfrutar. Nuestra imagen combina la elegancia del chocolate con la alegría de los sabores más coloridos.</p>
+        <a class="boton boton-contorno" href="#contacto">Conecta con nosotros <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <!-- CONTACTO: bloque de muestra sin inventar teléfono, redes ni correo -->
+    <section class="seccion seccion-contacto" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="contenedor">
+        <div class="contacto-panel">
+          <span class="etiqueta">Sigamos en contacto</span>
+          <h2 id="titulo-contacto">¿Listo para algo <em>dulce?</em></h2>
+          <p>Este es el espacio reservado para nuestros canales de contacto y novedades.</p>
+          <span class="contacto-nota">Información de contacto próximamente</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor pie-contenido">
+      <a class="marca marca-pie" href="#inicio" aria-label="Volver al inicio de Salvatore's Sweet"><span class="marca-sello" aria-hidden="true">S</span><span class="marca-texto">SALVATORE'S <small>Sweet</small></span></a>
+      <p>Un toque de magia en cada momento.</p>
+      <span>© <span id="anio-actual">2026</span> Salvatore's Sweet.</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
